@@ -7,7 +7,7 @@ function CheckWinner(allGrids){
 
    for(let i=0;i<index.length;i++){
 
-   
+      
          if(allGrids[index[i][0]].innerHTML == allGrids[index[i][1]].innerHTML && allGrids[index[i][0]].innerHTML == allGrids[index[i][2]].innerHTML && allGrids[index[i][0]].innerHTML != "" && allGrids[index[i][1]].innerHTML != "" && allGrids[index[i][2]].innerHTML != ""){
 
             allGrids[index[i][0]].style.color="red";
