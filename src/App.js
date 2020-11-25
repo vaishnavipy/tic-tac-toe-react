@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
+import { useContext, useState } from 'react';
 import './App.css';
+import Game from "./game";
+import {GameContext} from "./gameContextProvider"
 
 function App() {
+
+  const {nextPlayer,winner,handleReset,gameReset} = useContext(GameContext)
+
+  function handleStart(){
+    handleReset();
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <Game />
+      {gameReset ? <p><span>Next Player: </span>{nextPlayer} </p> : winner ? <p style={{color:"red"}}><span>Winner: </span>{winner} </p>  : <p><span>Next Player: </span>{nextPlayer} </p>}
+      <button onClick={handleStart}>Start Game</button>
     </div>
   );
 }
