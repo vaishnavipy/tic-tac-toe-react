@@ -25,11 +25,13 @@
   text-align: center;
   border-right: 3px solid #02008B;
   border-bottom: 3px solid #02008B;
-  padding:30px 0 30px 0;
+padding: 22px 0px 22px 0px ;
   font-weight: 900;
 color:black;
   margin:0;
   cursor: pointer;
+  height:70px;
+  
 }
 
 .noBottom{
